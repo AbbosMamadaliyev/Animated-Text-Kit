@@ -49,7 +49,7 @@ abstract class AnimatedText {
   Widget textWidget(String data) => Text(
         data,
         textAlign: textAlign,
-    maxLies: maxLines,
+    maxLines: maxLines,
         style: textStyle,
       );
 
