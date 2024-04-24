@@ -28,10 +28,13 @@ abstract class AnimatedText {
   /// Unicode and Emojis.
   final Characters textCharacters;
 
+  final int? maxLines;
+
   AnimatedText({
     required this.text,
     this.textAlign = TextAlign.start,
     this.textStyle,
+    this.maxLines,
     required this.duration,
   }) : textCharacters = text.characters;
 
@@ -46,6 +49,7 @@ abstract class AnimatedText {
   Widget textWidget(String data) => Text(
         data,
         textAlign: textAlign,
+    maxLies: maxLines,
         style: textStyle,
       );
 
