@@ -15,6 +15,7 @@ class TyperAnimatedText extends AnimatedText {
   ///
   /// By default it is set to Curves.linear.
   final Curve curve;
+  final int? maxLines;
 
   TyperAnimatedText(
     String text, {
@@ -22,8 +23,10 @@ class TyperAnimatedText extends AnimatedText {
     TextStyle? textStyle,
     this.speed = const Duration(milliseconds: 40),
     this.curve = Curves.linear,
+this.maxLines,
   }) : super(
           text: text,
+    maxLines: maxLines,
           textAlign: textAlign,
           textStyle: textStyle,
           duration: speed * text.characters.length,
